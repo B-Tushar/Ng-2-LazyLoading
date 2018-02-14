@@ -9,7 +9,7 @@ To test lazy loading just open browser console and onclick of link check the net
 On each click new entry will be made.
 ```
 
-##How to run project
+## How to run project
 ```
 1. Download /Clone repository
 2. npm install
