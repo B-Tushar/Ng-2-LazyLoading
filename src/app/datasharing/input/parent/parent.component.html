@@ -1,0 +1,5 @@
+<h3>Parent Component<h3>
+    <div>
+       <input type="text" #txtparent (keyup)="0" [value]="childMessage"> 
+    </div>
+    <app-child [parentMessage]="txtparent.value" (messageEvent)="getChildComponentValue($event)" ></app-child>

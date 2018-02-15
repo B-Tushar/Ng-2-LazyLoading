@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
+
  const routes: Routes = [
   {
     path: '',
@@ -14,7 +15,8 @@ import { HomeComponent } from './home/home.component';
   {
     path: 'input',
     loadChildren: 'app/datasharing/input/input.module#InputModule'
-  }
+  },
+   
 ];
 
 @NgModule({

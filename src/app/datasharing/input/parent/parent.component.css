@@ -1,0 +1,10 @@
+.box-panel{
+    border:1px solid black;
+    height: 40px;
+    width:54%;
+    background-color:gray; 
+}
+
+input{
+    margin:3px;
+}
