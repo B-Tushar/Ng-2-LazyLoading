@@ -5,11 +5,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 
+//import { ServiceComponent } from './datasharing/service/service/service.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+   // ReactiveFormComponent,
+    //ServiceComponent
   ],
   imports: [
     BrowserModule,

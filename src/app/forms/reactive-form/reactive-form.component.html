@@ -1,0 +1,38 @@
+<h3>using FromGroup</h3>
+<form [formGroup]="form">
+   <div class="form-group">
+     <label for="username">username</label>
+     <input type="text" id="username" class="form-control" formControlName="username">
+     <div *ngIf="username.touched && username.invalid">
+         <div *ngIf="username.errors.required" class="alert alert-danger">username is required</div>
+         <div *ngIf="username.errors.minlength" class="alert alert-danger">Minimum length shoud be {{username.errors.minlength.requiredLength}} character</div>
+         <div *ngIf="username.errors.maxlength" class="alert alert-danger">Maximum length shoud be {{username.errors.maxlength.requiredLength}} character</div>
+     </div>
+   </div>
+   <div class="form-group">
+     <label for="password">password</label>
+     <input type="text" id="password" class="form-control" formControlName="password">
+   </div>
+<button class="btn btn primary">Sign In</button>
+</form>
+ <h3> Using formBuilder</h3>
+<hr/>
+<form [formGroup]="formBuilder">
+  
+    <label for="name">name</label>
+    <input type="text" id="name" class="form-control" formControlName="name">
+    <div *ngIf="name.touched && name.invalid" class="alert alert-danger">name is required</div>
+  
+     <div class="form-group" formGroupName="contact">
+          <input formControlName="email" placeholder="email">              
+          <input formControlName="phone" placeholder="phone">
+     </div>
+     <input type="text" id="websiteUrl" class="form-control" formControlName="websiteUrl">
+     <div
+     *ngIf="websiteUrl.errors &&
+           websiteUrl.dirty &&
+           websiteUrl.errors.validUrl">
+       Oops, only urls served over https and only from the .io top-level domain are accepted.
+       Talk about restrictions!
+     </div>
+</form>

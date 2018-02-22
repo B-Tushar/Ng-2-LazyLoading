@@ -12,9 +12,13 @@ import { HomeComponent } from './home/home.component';
     path: 'dashboard',
     loadChildren: 'app/dashboard/dashboard.module#DashboardModule'
   },
-  {
-    path: 'input',
-    loadChildren: 'app/datasharing/input/input.module#InputModule'
+    {
+      path: 'input',
+      loadChildren: 'app/datasharing/input/input.module#InputModule'
+    },
+   {
+    path: 'reactive',
+    loadChildren: 'app/forms/reactive.module#ReactiveModule'
   },
    
 ];
